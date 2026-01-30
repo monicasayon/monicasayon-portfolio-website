@@ -34,6 +34,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Monica Sayon | Artist & Web Developer",
   description: "Exploring the space where digital illustration meets interactive web design.",
+  icons: {
+    icon: "/icon.png", // This points to public/monica.png
+  },
 };
 
 export default function RootLayout({
