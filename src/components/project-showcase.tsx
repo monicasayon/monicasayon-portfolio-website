@@ -28,10 +28,10 @@ const projects = [
   },
   {
     id: "04",
-    title: "Project Flexbox",
-    category: "Web Design",
-    desc: "Flexbox based layout project demonstrating modern CSS techniques.",
-    path: "/projects/flexbox/index.html",
+    title: "Elegant Poodle",
+    category: "Web Development",
+    desc: "AI generated content website about Elegant Poodles using TailwindCSS and Vite React",
+    path: "https://elagantpoodle.netlify.app/",
   },
   {
     id: "05",
