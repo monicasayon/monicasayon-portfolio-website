@@ -8,18 +8,17 @@ import { MediaGallery } from "@/components/media-gallery";
 export default function Home() {
   return (
     // The main container handles the 100% height and centering
-    <main className="relative min-h-screen w-full bg-[#000000] flex overflow-hidden">
+    <main className="relative min-h-screen w-full bg-[#000000] flex overflow-x-hidden">
       <CursorSpotlight />
 
-      <div className="relative z-10 flex w-full">
-        {/* Container for both elements with a specific gap */}
-        {/*Static left part, my name, short intro, nav buttons and social links*/}
+      <div className="relative z-10 flex flex-col lg:flex-row w-full">
+
         {/* LEFT SIDE - Static/Fixed */}
-        <div className=" fixed top-0 left-0 h-full w-1/2 flex flex-col items-start justify-start p-24 z-10">
+        <div className="relative lg:fixed top-0 left-0 h-auto lg:h-full w-full lg:w-1/2 flex flex-col items-start justify-start p-10 lg:p-24 z-10 border-b lg:border-b-0 border-zinc-900">
           <h1 className="text-white font-bold font-figtree text-[40px] leading-tight tracking-tighter">MONICA SAYON</h1>
           <h2 className="text-[#EBD3F8] mt-4 font-bold text-[22px]">Artist | Web Developer</h2>
           <p className="text-[#EBD3F8] mt-3 text-[18px]">Exploring the space where digital illustration<br/> meets interactive web design.</p>
-          <nav className="mt-12 flex flex-col space-y-4">
+          <nav className="hidden lg:flex mt-12 flex-col space-y-4">
           {['About Me', 'Web Architecture', 'Visual & Creative Media'].map((item) => (
             <a 
               key={item}
@@ -33,7 +32,7 @@ export default function Home() {
           ))}
         </nav>
         <SocialLinks />
-        <div className="pt-12">
+        <div className="hidden md:block pt-12">
           <p className="text-[11px] text-zinc-600 font-mono uppercase tracking-[0.2em] leading-relaxed">
             Created using <span className="text-zinc-400">TailwindCSS Aceternity UI</span> and <span className="text-zinc-400">Node.js</span>
           </p>
@@ -44,9 +43,9 @@ export default function Home() {
         </div>
         
         {/* RIGHT SIDE - Static/Fixed */}
-        <div className="ml-[50%] w-1/2 min-h-screen">
-        <div className="flex flex-col items-start justify-start p-10 md:p-6">
-          <section id="about me" className="flex flex-col justify-start p-10 pb-20 mb-20 md:p-6 ">
+        <div className="ml-0 lg:ml-[50%] w-full lg:w-1/2 min-h-screen">
+        <div className="flex flex-col items-start justify-start p-10 lg:p-6">
+          <section id="about me" className="flex flex-col justify-start p-10 pb-20 mb-20 lg:p-6 ">
             {/* The Neon Bracket Heading */}
             <div className="flex items-center gap-4 mb-8 group">
               <span className="text-[#CC66DA] text-4xl font-light animate-pulse">[</span>
@@ -120,7 +119,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="web architecture" className="flex flex-col justify-start p-10 pb-20 md:p-6 ">
+          <section id="web architecture" className="p-6 lg:p-10 pb-20 w-full">
             <div className="flex items-start gap-4 mb-6 group">
               <span className="text-[#CC66DA] text-4xl font-light animate-pulse">[</span>
               <h2 className="font-figtree text-3xl font-bold tracking-tight text-white uppercase">
@@ -131,7 +130,7 @@ export default function Home() {
             <ProjectShowcase />
           </section>
 
-          <section id="visual & creative media" className="flex flex-col justify-start p-10 pb-20 md:p-6 ">
+          <section id="visual & creative media" className="p-6 lg:p-10 pb-20 w-full">
             <div className="flex items-start gap-4 mb-10 group">
               <span className="text-[#CC66DA] text-4xl font-light animate-pulse">[</span>
               <h2 className="font-figtree text-3xl font-bold tracking-tight text-white uppercase">
@@ -142,6 +141,16 @@ export default function Home() {
             <MediaGallery />
           </section>
         </div>
+        <footer className="md:hidden p-10 pt-0 pb-20 border-zinc-900/50">
+            <div className="space-y-4">
+              <p className="text-[10px] text-zinc-600 font-mono uppercase tracking-[0.2em] leading-relaxed">
+                Created using <span className="text-zinc-400">TailwindCSS Aceternity UI</span> and <span className="text-zinc-400">Node.js</span>
+              </p>
+              <p className="text-[9px] text-zinc-800 uppercase font-mono">
+                © 2026 — Monica Sayon — All rights reserved
+              </p>
+            </div>
+          </footer>
       </div>
       </div>
 
