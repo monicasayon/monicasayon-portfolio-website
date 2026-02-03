@@ -7,32 +7,33 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 const projects = [
   {
     id: "01",
+    title: "Elegant Poodle",
+    category: "Web Development",
+    desc: "AI generated content website about Elegant Poodles using TailwindCSS and Vite React",
+    path: "https://elagantpoodle.netlify.app/",
+  },
+  {
+    id: "02",
     title: "Landing Page",
     category: "Web Design",
     desc: "A minimalist UI design focusing on typography and whitespace.",
     path: "/projects/landing-page/index.html",
   },
   {
-    id: "02",
+    id: "03",
     title: "Tribute Page",
     category: "Web Design",
     desc: "A  minimalist tribute page of Virginia Woolf using HTML5 and CSS3.",
     path: "/projects/tribute-page/index.html",
   },
   {
-    id: "03",
+    id: "04",
     title: "City Skyline",
     category: "Responsive Web Design",
     desc: "A responsive HTML and Vanilla CSS project showcasing city skyline. Day and Night Activated by Window Width changes.",
     path: "/projects/city skyline/index.html",
   },
-  {
-    id: "04",
-    title: "Elegant Poodle",
-    category: "Web Development",
-    desc: "AI generated content website about Elegant Poodles using TailwindCSS and Vite React",
-    path: "https://elagantpoodle.netlify.app/",
-  },
+  
   {
     id: "05",
     title: "Galerya ng Kultura",
