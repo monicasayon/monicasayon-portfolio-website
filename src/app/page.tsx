@@ -7,13 +7,12 @@ import { MediaGallery } from "@/components/media-gallery";
 
 export default function Home() {
   return (
-    // The main container handles the 100% height and centering
     <main className="relative min-h-screen w-full bg-[#000000] flex overflow-x-hidden">
       <CursorSpotlight />
 
       <div className="relative z-10 flex flex-col lg:flex-row w-full">
 
-        {/* LEFT SIDE - Static/Fixed */}
+        {/*LEFT SIDE Static Fixed */}
         <div className="relative lg:fixed top-0 left-0 h-auto lg:h-full w-full lg:w-1/2 flex flex-col items-start justify-start p-10 lg:p-24 z-10 border-b lg:border-b-0 border-zinc-900">
           <h1 className="text-white font-bold font-figtree text-[40px] leading-tight tracking-tighter">MONICA SAYON</h1>
           <h2 className="text-[#EBD3F8] mt-4 font-bold text-[22px]">Artist | Web Developer</h2>
@@ -25,7 +24,7 @@ export default function Home() {
               href={`#${item.toLowerCase()}`}
               className="group flex items-center text-zinc-500 hover:text-white transition-all duration-300"
             >
-              {/* Animated line that grows on hover */}
+              
               <span className="h-px w-8 bg-zinc-800 mr-4 group-hover:w-16 group-hover:bg-brand-purple transition-all duration-300"></span>
               <span className="text-sm uppercase tracking-widest">{item}</span>
             </a>
@@ -42,11 +41,11 @@ export default function Home() {
         </div>
         </div>
         
-        {/* RIGHT SIDE - Static/Fixed */}
+        {/* RIGHT SIDE Scrollable */}
         <div className="ml-0 lg:ml-[50%] w-full lg:w-1/2 min-h-screen">
         <div className="flex flex-col items-start justify-start p-10 lg:p-6">
           <section id="about me" className="flex flex-col justify-start p-10 pb-20 mb-20 lg:p-6 ">
-            {/* The Neon Bracket Heading */}
+            
             <div className="flex items-center gap-4 mb-8 group">
               <span className="text-[#CC66DA] text-4xl font-light animate-pulse">[</span>
               <h2 className="font-figtree text-3xl font-bold tracking-tight text-white uppercase">
@@ -55,7 +54,6 @@ export default function Home() {
               <span className="text-[#CC66DA] text-4xl font-light animate-pulse">]</span>
             </div>
               
-            {/* Description Text */}
             <div className="max-w-xl space-y-6">
               <p className="font-figtree text-lg text-zinc-400 leading-relaxed">
                 I am a multi-disciplinary <span className="text-white font-bold">visual artist and front-end developer </span> 
@@ -98,12 +96,11 @@ export default function Home() {
                 }
               ].map((category, idx) => (
                 <div key={idx} className="flex flex-col gap-4">
-                  {/* Category Heading */}
+
                   <h3 className="font-figtree text-xs uppercase tracking-[0.3em] text-zinc-500 font-bold ml-1">
                     {category.title}
                   </h3>
               
-                  {/* Skills Grid/Flex */}
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill) => (
                       <span 
