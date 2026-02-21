@@ -27,7 +27,7 @@ const figtree = Figtree({
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-open-sans", // This creates the variable
+  variable: "--font-open-sans",
   display: "swap",
 });
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   title: "Monica Sayon | Artist & Web Developer",
   description: "Exploring the space where digital illustration meets interactive web design.",
   icons: {
-    icon: "/icon.png", // This points to public/monica.png
+    icon: "/icon.png",
   },
 };
 
